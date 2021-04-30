@@ -17,14 +17,14 @@ export default function Task(prop) {
     let costInSec = costPerHour / 3600;
 
     if (prop.buttonType === "Start") {
-        colClass = "col-9";
-        divClass = "col-3 align-self-center butStart";
+        colClass = "col-xl-9";
+        divClass = "col-xl-3 align-self-center butStart";
         buttonClass = "btn btn-primary butStartText";
         status = 'In progress';
         timer = 0;
     } else if (prop.buttonType === "Resolve") {
-        colClass = "col-8";
-        divClass = "col-4 align-self-center butResolve";
+        colClass = "col-xl-7";
+        divClass = "col-xl-5 align-self-center butResolve";
         buttonClass = "btn btn-primary butResolveText butStartText";
         status = 'Done';
         cost = Math.round(costInSec * seconds * 100) / 10;
