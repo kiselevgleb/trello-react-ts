@@ -1,4 +1,4 @@
-export const postTicket = async (data) => {
+export const postTicket = async (data:string) => {
     const response = await fetch(`${process.env.REACT_APP_POSTTASK_URL}`,
         {
             method: 'POST',

@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import * as React from "react";
 
 export default function Header() {
 
     return (
-        <Fragment>
+        <React.Fragment>
             <h1 className="h1">Anyway Labs Test Project</h1>
             <p className="p">Just some good deeds</p>
-        </Fragment>
+        </React.Fragment>
     )
 }

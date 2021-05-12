@@ -7,7 +7,7 @@ import { getTicketsRequest } from './actions/actionCreators';
 import { useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 
-function App(props) {
+function App() {
 
   const dispatch = useDispatch();
   useEffect(() => {

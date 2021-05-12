@@ -3,10 +3,10 @@ import { postTicketSuccess, postTicketFailure, getTicketsSuccess, getTicketsFail
 import { POST_TICKET_REQUEST, GET_TICKETS_REQUEST } from '../actions/actionTypes';
 import { postTicket, listTickets, } from '../api/index';
 
-function* handleGetTicketsSaga(action) {
+function* handleGetTicketsSaga(): any {
     try {
-        const retryCount = 3;
-        const retryDelay = 1 * 1000; // ms
+        const retryCount: number = 3;
+        const retryDelay: number = 1 * 1000; // ms
         const data = yield retry(retryCount, retryDelay, listTickets);
         yield put(getTicketsSuccess(data));
     } catch (e) {
@@ -19,7 +19,7 @@ function* watchGetTicketsSaga() {
     yield takeEvery(GET_TICKETS_REQUEST, handleGetTicketsSaga);
 }
 
-function filterPostTicketAction({ type, payload }) {
+function filterPostTicketAction({ type, payload }:any) {
     return type === POST_TICKET_REQUEST && payload.data !== ''
 }
 
@@ -29,11 +29,11 @@ function* watchPostTicketSaga() {
 }
 
 // worker
-function* handlePostTicketSaga(action) {
+function* handlePostTicketSaga(action:any): any {
     try {
-        const retryCount = 3;
-        const retryDelay = 1 * 1000; // ms
-        const data = yield retry(retryCount, retryDelay, postTicket, action.payload.data);
+        const retryCount: number = 3;
+        const retryDelay: number = 1 * 1000; // ms
+        const data:any = yield retry(retryCount, retryDelay, postTicket, action.payload.data);
         yield put(postTicketSuccess(data));
     } catch (e) {
         yield put(postTicketFailure(e.message));

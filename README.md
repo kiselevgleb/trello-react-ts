@@ -1,9 +1,9 @@
-# Trello-back repository with front:
-https://github.com/kiselevgleb/trello-react
+# Trello-react TS repository with front:
+https://github.com/kiselevgleb/trello-react-ts
 
 Back server https://trello-back.herokuapp.com/
 
-Front REACT JS (github) + Back node JS koa (heroku)
+Front REACT TS (github) + Back node JS koa (heroku)
 
 ## Repository with back server:
 https://github.com/kiselevgleb/trello-back

@@ -8,17 +8,17 @@ import {
 
 } from './actionTypes';
 
-export const postTicketRequest = data => ({
+export const postTicketRequest = (data:string) => ({
   type: POST_TICKET_REQUEST,
   payload: { data },
 });
 
-export const postTicketFailure = errorTicket => ({
+export const postTicketFailure = (errorTicket:string) => ({
   type: POST_TICKET_FAILURE,
   payload: { errorTicket },
 });
 
-export const postTicketSuccess = ticket => ({
+export const postTicketSuccess = (ticket:string) => ({
   type: POST_TICKET_SUCCESS,
   payload: { ticket },
 });
@@ -27,12 +27,12 @@ export const getTicketsRequest = () => ({
   type: GET_TICKETS_REQUEST,
 });
 
-export const getTicketsFailure = error => ({
+export const getTicketsFailure = (error:string) => ({
   type: GET_TICKETS_FAILURE,
   payload: { error },
 });
 
-export const getTicketsSuccess = tickets => ({
+export const getTicketsSuccess = (tickets:string) => ({
   type: GET_TICKETS_SUCCESS,
   payload: { tickets },
 });

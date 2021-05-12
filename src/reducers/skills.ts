@@ -6,8 +6,9 @@ import {
   POST_TICKET_FAILURE,
   POST_TICKET_SUCCESS,
 } from '../actions/actionTypes'
+import tic from '../ticProps';
 
-const initialState = {
+const initialState: object = {
   tickets: [],
   loading: false,
   error: null,
@@ -17,7 +18,7 @@ const initialState = {
   ticketsDone: [],
 };
 
-export default function skillsReducer(state = initialState, action) {
+export default function skillsReducer(state = initialState, action:any) {
   switch (action.type) {
 
     case POST_TICKET_REQUEST:
@@ -38,9 +39,9 @@ export default function skillsReducer(state = initialState, action) {
       return {
         ...state,
         tickets: ticket,
-        ticketsTodo: ticket.filter((tic) => tic.status === 'To do'),
-        ticketsInPr: ticket.filter((tic) => tic.status === 'In progress'),
-        ticketsDone: ticket.filter((tic) => tic.status === 'Done'),
+        ticketsTodo: ticket.filter((tic:tic) => tic.status === 'To do'),
+        ticketsInPr: ticket.filter((tic:tic) => tic.status === 'In progress'),
+        ticketsDone: ticket.filter((tic:tic) => tic.status === 'Done'),
         loading: false,
         error: null,
       };
@@ -63,9 +64,9 @@ export default function skillsReducer(state = initialState, action) {
       return {
         ...state,
         tickets,
-        ticketsTodo: tickets.filter((tic) => tic.status === 'To do'),
-        ticketsInPr: tickets.filter((tic) => tic.status === 'In progress'),
-        ticketsDone: tickets.filter((tic) => tic.status === 'Done'),
+        ticketsTodo: tickets.filter((tic:tic) => tic.status === 'To do'),
+        ticketsInPr: tickets.filter((tic:tic) => tic.status === 'In progress'),
+        ticketsDone: tickets.filter((tic:tic) => tic.status === 'Done'),
         loading: false,
         error: null,
       };
